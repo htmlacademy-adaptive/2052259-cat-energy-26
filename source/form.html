@@ -54,22 +54,49 @@
       <h2 class="cat-statistics__titel">Подбор программы</h2>
       <p class="cat-statistics__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="cat-statistics__form" action="#" method="post">
-        <div class="name-cat">
-          <label class="name-cat__description" for="name">ИМЯ:<sup>*</sup></label>
-          <input class="name-cat__user-text" type="text">
-        </div>
-        <div class="weight-cat">
-          <label class="weight-cat__description" for="weight">Вес (кг):<sup>*</sup></label>
-          <input class="weight-cat__user-text" type="number">
-        </div>
-        <div class="age-cat">
-          <label class="age-cat__description" for="age">Возраст (лет):</label>
-          <input class="age-cat__user-text" type="number">
-        </div>
-        <div class="age-cat">
-          <label class="age-cat__description" for="age">Возраст (лет):</label>
-          <input class="age-cat__user-text" type="number">
-        </div>
+        <fieldset>
+          <div class="name-cat">
+            <label class="name-cat__description">
+              <span>ИМЯ:<sup>*</sup></span>
+              <input class="name-cat__user-text" type="text">
+            </label>
+          </div>
+          <div class="weight-cat">
+            <label class="weight-cat__description">
+              <span>Вес (кг):<sup>*</sup></span>
+              <input class="weight-cat__user-text" type="number">
+            </label>
+          </div>
+          <div class="age-cat">
+            <label class="age-cat__description" for="age">
+              <span>Возраст (лет):</span>
+              <input class="age-cat__user-text" type="number">
+            </label>
+          </div>
+          <div class="program-selection ">
+            <ul class="program-selection__list">
+              <li class="program-selection__item">
+                <label class="">
+                  <input class="" type="radio" checked>
+                  <span class="">похудение</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="">
+                  <input class="" type="radio">
+                  <span class="">набор массы</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="">
+                  <input class="" type="radio">
+                  <span class="">не знаю (нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+            </label>
+          </div>
+        </fieldset>
       </form>
     </section>
   </main>
