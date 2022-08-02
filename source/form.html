@@ -55,48 +55,96 @@
       <p class="cat-statistics__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="cat-statistics__form" action="#" method="post">
         <fieldset>
-          <div class="name-cat">
-            <label class="name-cat__description">
+          <div class="form__name-cat">
+            <label class="form__name-cat__description">
               <span>ИМЯ:<sup>*</sup></span>
-              <input class="name-cat__user-text" type="text">
+              <input class="form__name-cat__user-text" type="text">
             </label>
           </div>
-          <div class="weight-cat">
-            <label class="weight-cat__description">
+          <div class="form__weight-cat">
+            <label class="form__weight-cat__description">
               <span>Вес (кг):<sup>*</sup></span>
-              <input class="weight-cat__user-text" type="number">
+              <input class="form__weight-cat__user-text" type="number">
             </label>
           </div>
-          <div class="age-cat">
-            <label class="age-cat__description" for="age">
+          <div class="form__age-cat">
+            <label class="form__age-cat__description">
               <span>Возраст (лет):</span>
-              <input class="age-cat__user-text" type="number">
+              <input class="form__age-cat__user-text" type="number">
             </label>
           </div>
-          <div class="program-selection ">
+          <div class="program-selection">
             <ul class="program-selection__list">
               <li class="program-selection__item">
-                <label class="">
-                  <input class="" type="radio" checked>
-                  <span class="">похудение</span>
+                <label class="program-slim">
+                  <input class="program-slim--button" type="radio" name="program-selection" checked>
+                  <span class="program-slim__text">похудение</span>
                 </label>
               </li>
               <li class="program-selection__item">
-                <label class="">
-                  <input class="" type="radio">
-                  <span class="">набор массы</span>
+                <label class="program-pro">
+                  <input class="program-pro--button" type="radio" name="program-selection">
+                  <span class="program-pro__text">набор массы</span>
                 </label>
               </li>
               <li class="program-selection__item">
-                <label class="">
-                  <input class="" type="radio">
-                  <span class="">не знаю (нужен ваш совет)</span>
+                <label class="program-advise--program-advise">
+                  <input class="button" type="radio" name="program-selection">
+                  <span class="program-advise__text">не знаю (нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
+          </div>
+          <div class="form__data-user">
+            <h3 class="data-user__titel">Контактные данные (владельца кота)</h3>
+            <label class="data-user__mail">
+              <span class="data-user__mail-text">E-mail:<sup>*</sup></span>
+              <input class="data-user__mail-field" type="email" placeholder="kuklachev@gmail.com">
+              <svg class="data-user__mail-icon" width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#222" stroke-width="1.3"
+                  d="M1.65 5.84766v8.00004M18.65 5.84766v8.00004M1 13.1977h18M1 1.19766h18M18.35 3.02975 10 9.5242 1.65 3.02975V1.49766h16.7v1.53209Z" />
+              </svg>
+            </label>
+            <label class="data-user__telefon">
+              <span class="data-user__telefon-text">Телефон:<sup>*</sup></span>
+              <input class="data-user__telefon-field" type="tel" placeholder="8 (960) 900-60-90">
+              <svg class="data-user__telefon-icon" width="20" height="21" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)" fill="#000">
+                  <path
+                    d="M17.9 9.75275H9.39999v1.20415H17.9l-2.1 2.1072.9.9031 3.1-3.1107c.0974-.1302.15-.2887.15-.4515 0-.1629-.0526-.3213-.15-.45156l-3.1-3.11067-.9.9031 2.1 2.00688ZM8.10001 19.7872v-6.2213c-.01155-.1559-.07847-.3024-.18859-.4129-.11011-.1105-.25611-.1776-.41141-.1892h-4.4c.00515.3177.13324.621.35717.8457.22394.2247.52618.3532.84283.3584h2.5v5.0172h-3.7c-.23675.0149-.4741-.0175-.69825-.0955-.22414-.0779-.43061-.1998-.6074-.3585-.17679-.1588-.32037-.3512-.4224-.5661-.10204-.2149-.16048-.448-.17195-.6857V3.43111c-.0082-.4643.16515-.91337.48291-1.25098.31777-.33761.75466-.53691 1.21709-.55521h3.9v5.0172h-2.4c-.31665.00517-.61889.13369-.84283.3584-.22393.22471-.35202.52799-.35717.84573h4.4c.1553-.01159.3013-.07874.41141-.18924.11012-.1105.17704-.25699.18859-.41283V.922517c-.04769-.156677-.13884-.296495-.2628-.40311-.12396-.106615-.2756-.175622-.4372-.198954h-4.4c-.39402-.013399-.7868.051263-1.1559.190291-.3691.139027-.70727.349692-.995177.619946-.287907.27026-.519903.59481-.682726.9551-.162822.36029-.253277.74925-.2661924 1.14464V17.1782c-.028979.3991.0246358.7998.1574724 1.177.132837.3772.342022.7228.614399 1.0149.272374.2922.602054.5246.968304.6828.36624.1581.76113.2384 1.15982.236h4.6c.07349.0151.14942.0133.22215-.005.07274-.0184.14043-.053.19805-.1011.05762-.0482.1037-.1088.13483-.1773.03112-.0684.04649-.1431.04497-.2183Z" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" transform="translate(0 .320435)" d="M0 0h20v20.0688H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
             </label>
           </div>
+          <div class="form__story-cat">
+            <h3 class="story-cat__titel">Комментарий</h3>
+            <span class="story-cat__text">Расскажите обо всех повадках кота</span>
+            <label class="story-cat__description">
+              <textarea class="story-cat__field" name="" cols="20" rows="5"></textarea>
+            </label>
+          </div>
+          <div class="form__user-addition-info">
+            <h3 class="user-addition-info__titel">Дополнительно</h3>
+            <input class="addition-info__sugar" type="checkbox" name="user-addition-info" checked><label
+              class="addition-info__sugar-text">сахарозаменитель</label><br>
+            <input class="addition-info__water" type="checkbox" name="user-addition-info"><label
+              class="addition-info__water-text">питьевая вода</label><br>
+            <input class="addition-info__milk" type="checkbox" name="user-addition-info"><label
+              class="addition-info__milk-text">молоко</label><br>
+            <input class="addition-info__vitamin" type="checkbox" name="user-addition-info"><label
+              class="addition-info__vitamin-text">витамины</label>
+          </div>
+          <button class="statistics-form__button button" type="submit">
+            <span class="statistics-form__button-text">отправить заявку</span>
+          </button>
         </fieldset>
+        <span class="statistics-form__description"><sup>*</sup> <sup>-</sup> Обязательные поля</span>
       </form>
     </section>
   </main>
