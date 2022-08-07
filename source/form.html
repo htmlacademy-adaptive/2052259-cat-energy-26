@@ -8,28 +8,21 @@
 
 <body class="page__body">
   <header class="main-header">
-    <div class="main-header__logo">
-      <div class="main-header__logo cat-image">
-        <a class="cat-image-item">
-          <img class="image cat-image--svg" src="/source/img/logo-mobile-cat.svg" width="33" height="38"
-            alt="логотип кет энерджи картинка">
-        </a>
-      </div>
-      <div class="main-header__logo cat">
-        <a class="cat-text-link">
-          <img class="imge cat-text--svg" src="/source/img/logo-cat-text.svg" width="101" height="18"
-            alt="логотип кет энерджи текст">
-        </a>
-      </div>
-    </div>
+    <a class="main-header__logo">
+      <img class="image" src="/source/img/logo-mobile-cat.svg" width="33" height="38"
+        alt="логотип кет энерджи картинка">
+    </a>
+    <a class="main-header__logo main-header__logo-text">
+      <img class="image" src="/source/img/logo-cat-text.svg" width="101" height="18" alt="логотип кет энерджи текст">
+    </a>
+    <button class="main-nav__toggle button" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
     <nav class="main-nav">
-      <button class="main-nav__toggle button" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">
               Главная
             </a>
           </li>
@@ -38,119 +31,121 @@
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a class="site-list__link" href="form.html">
               Подбор программы
             </a>
           </li>
         </ul>
-        <div class="main-nav__list user-list">
-        </div>
       </div>
     </nav>
   </header>
   <main class="main-container main-form-conteiner">
-    <div class="main-form-wrapper">
-      <h1 class="visually-hidden">Анкета для подбора программы</h1>
-      <section class="cat-statistics">
-        <h2 class="cat-statistics__titel">Подбор программы</h2>
-        <form class="cat-statistics__form" action="#" method="post">
-          <fieldset>
-            <legend class="cat-statistics__text">Заполните анкету, и мы подберем программу питания для вашего кота
-            </legend>
-            <div class="form__name-cat">
-              <label class="form__name-cat__description">
-                <span>ИМЯ:<sup>*</sup></span>
-                <input class="form__name-cat__user-text" type="text">
-              </label>
-            </div>
-            <div class="form__weight-cat">
-              <label class="form__weight-cat__description">
-                <span>Вес (кг):<sup>*</sup></span>
-                <input class="form__weight-cat__user-text" type="number">
-              </label>
-            </div>
-            <div class="form__age-cat">
-              <label class="form__age-cat__description">
-                <span>Возраст (лет):</span>
-                <input class="form__age-cat__user-text" type="number">
-              </label>
-            </div>
-            <div class="program-selection">
-              <ul class="program-selection__list">
-                <li class="program-selection__item">
-                  <label class="program-slim">
-                    <input class="program-slim--button" type="radio" name="program-selection" checked>
+    <section class="form-main">
+      <h1 class="form-main__titel">Подбор программы</h1>
+      <p class="form-main__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="form" action="#" method="post">
+        <div class="form-wrapper">
+          <div class="form-cat">
+            <fieldset class="form__group">
+              <legend class="visually-hidden">ввод данных кота</legend>
+              <ul class="form__list">
+                <li class="form__item cat-info">
+                  <label class="form__label cat-info__description">
+                    <span>ИМЯ:<sup>*</sup></span>
+                    <input class="form__input cat-info__text" type="text">
+                  </label>
+                </li>
+                <li class="form__item cat-info">
+                  <label class="form__label cat-info__description">
+                    <span>Вес (кг):<sup>*</sup></span>
+                    <input class="form__input cat-info__text" type="number">
+                  </label>
+                </li>
+                <li class="form__item cat-info">
+                  <label class="form__label cat-info__description">
+                    <span>Возраст (лет):</span>
+                    <input class="form__input cat-info__text" type="number">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__radio">
+              <legend class="visually-hidden">выбор програм для кота</legend>
+              <ul class="form__list">
+                <li class="form__item program-slim">
+                  <label class="form__label program-slim___label">
+                    <input class="form__input program-slim__input" type="radio" name="program-selection" checked>
                     <span class="program-slim__text">похудение</span>
                   </label>
                 </li>
-                <li class="program-selection__item">
-                  <label class="program-pro">
-                    <input class="program-pro--button" type="radio" name="program-selection">
+                <li class="form__item program-pro">
+                  <label class="form__label program-pro__label">
+                    <input class="form__input program-pro__input" type="radio" name="program-selection">
                     <span class="program-pro__text">набор массы</span>
                   </label>
                 </li>
-                <li class="program-selection__item">
-                  <label class="program-advise--program-advise">
-                    <input class="program-advise--button" type="radio" name="program-selection">
+                <li class="form__item program-advise">
+                  <label class="form__label program-advise__label">
+                    <input class="form__input program-advise__input" type="radio" name="program-selection">
                     <span class="program-advise__text">не знаю (нужен ваш совет)</span>
                   </label>
                 </li>
               </ul>
-            </div>
-            <div class="form__data-user">
-              <h3 class="data-user__titel">Контактные данные (владельца кота)</h3>
-              <label class="data-user__mail">
-                <span class="data-user__mail-text">E-mail:<sup>*</sup></span>
-                <input class="data-user__mail-field" type="email" placeholder="kuklachev@gmail.com">
-                <svg class="data-user__mail-icon" width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="#222" stroke-width="1.3"
-                    d="M1.65 5.84766v8.00004M18.65 5.84766v8.00004M1 13.1977h18M1 1.19766h18M18.35 3.02975 10 9.5242 1.65 3.02975V1.49766h16.7v1.53209Z" />
-                </svg>
-              </label>
-              <label class="data-user__telefon">
-                <span class="data-user__telefon-text">Телефон:<sup>*</sup></span>
-                <input class="data-user__telefon-field" type="tel" placeholder="8 (960) 900-60-90">
-                <svg class="data-user__telefon-icon" width="20" height="21" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#a)" fill="#000">
-                    <path
-                      d="M17.9 9.75275H9.39999v1.20415H17.9l-2.1 2.1072.9.9031 3.1-3.1107c.0974-.1302.15-.2887.15-.4515 0-.1629-.0526-.3213-.15-.45156l-3.1-3.11067-.9.9031 2.1 2.00688ZM8.10001 19.7872v-6.2213c-.01155-.1559-.07847-.3024-.18859-.4129-.11011-.1105-.25611-.1776-.41141-.1892h-4.4c.00515.3177.13324.621.35717.8457.22394.2247.52618.3532.84283.3584h2.5v5.0172h-3.7c-.23675.0149-.4741-.0175-.69825-.0955-.22414-.0779-.43061-.1998-.6074-.3585-.17679-.1588-.32037-.3512-.4224-.5661-.10204-.2149-.16048-.448-.17195-.6857V3.43111c-.0082-.4643.16515-.91337.48291-1.25098.31777-.33761.75466-.53691 1.21709-.55521h3.9v5.0172h-2.4c-.31665.00517-.61889.13369-.84283.3584-.22393.22471-.35202.52799-.35717.84573h4.4c.1553-.01159.3013-.07874.41141-.18924.11012-.1105.17704-.25699.18859-.41283V.922517c-.04769-.156677-.13884-.296495-.2628-.40311-.12396-.106615-.2756-.175622-.4372-.198954h-4.4c-.39402-.013399-.7868.051263-1.1559.190291-.3691.139027-.70727.349692-.995177.619946-.287907.27026-.519903.59481-.682726.9551-.162822.36029-.253277.74925-.2661924 1.14464V17.1782c-.028979.3991.0246358.7998.1574724 1.177.132837.3772.342022.7228.614399 1.0149.272374.2922.602054.5246.968304.6828.36624.1581.76113.2384 1.15982.236h4.6c.07349.0151.14942.0133.22215-.005.07274-.0184.14043-.053.19805-.1011.05762-.0482.1037-.1088.13483-.1773.03112-.0684.04649-.1431.04497-.2183Z" />
-                  </g>
-                  <defs>
-                    <clipPath id="a">
-                      <path fill="#fff" transform="translate(0 .320435)" d="M0 0h20v20.0688H0z" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </label>
-            </div>
-            <div class="form__story-cat">
-              <h3 class="story-cat__titel">Комментарий</h3>
-              <span class="story-cat__text">Расскажите обо всех повадках кота</span>
-              <label class="story-cat__description">
-                <textarea class="story-cat__field" name="story-cat" cols="20" rows="5"></textarea>
-              </label>
-            </div>
-            <div class="form__user-addition-info">
-              <h3 class="user-addition-info__titel">Дополнительно</h3>
-              <input class="addition-info__sugar" type="checkbox" name="user-addition-info" checked><label
-                class="addition-info__sugar-text">сахарозаменитель</label><br>
-              <input class="addition-info__water" type="checkbox" name="user-addition-info"><label
-                class="addition-info__water-text">питьевая вода</label><br>
-              <input class="addition-info__milk" type="checkbox" name="user-addition-info"><label
-                class="addition-info__milk-text">молоко</label><br>
-              <input class="addition-info__vitamin" type="checkbox" name="user-addition-info"><label
-                class="addition-info__vitamin-text">витамины</label>
-            </div>
-            <button class="statistics-form__button button" type="submit">
-              <span class="statistics-form__button-text">отправить заявку</span>
-            </button>
+            </fieldset>
+          </div>
+          <fieldset class="form__data-user">
+            <legend class="form-legend data-user__legend">Контактные данные (владельца кота)</legend>
+            <label class="data-user__mail">
+              <span class="data-user__mail-text">E-mail:<sup>*</sup></span>
+              <input class="data-user__mail-field" type="email" placeholder="kuklachev@gmail.com">
+              <svg class="data-user__mail-icon" width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#222" stroke-width="1.3"
+                  d="M1.65 5.84766v8.00004M18.65 5.84766v8.00004M1 13.1977h18M1 1.19766h18M18.35 3.02975 10 9.5242 1.65 3.02975V1.49766h16.7v1.53209Z" />
+              </svg>
+            </label>
+            <label class="data-user__telefon">
+              <span class="data-user__telefon-text">Телефон:<sup>*</sup></span>
+              <input class="data-user__telefon-field" type="tel" placeholder="8 (960) 900-60-90">
+              <svg class="data-user__telefon-icon" width="20" height="21" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)" fill="#000">
+                  <path
+                    d="M17.9 9.75275H9.39999v1.20415H17.9l-2.1 2.1072.9.9031 3.1-3.1107c.0974-.1302.15-.2887.15-.4515 0-.1629-.0526-.3213-.15-.45156l-3.1-3.11067-.9.9031 2.1 2.00688ZM8.10001 19.7872v-6.2213c-.01155-.1559-.07847-.3024-.18859-.4129-.11011-.1105-.25611-.1776-.41141-.1892h-4.4c.00515.3177.13324.621.35717.8457.22394.2247.52618.3532.84283.3584h2.5v5.0172h-3.7c-.23675.0149-.4741-.0175-.69825-.0955-.22414-.0779-.43061-.1998-.6074-.3585-.17679-.1588-.32037-.3512-.4224-.5661-.10204-.2149-.16048-.448-.17195-.6857V3.43111c-.0082-.4643.16515-.91337.48291-1.25098.31777-.33761.75466-.53691 1.21709-.55521h3.9v5.0172h-2.4c-.31665.00517-.61889.13369-.84283.3584-.22393.22471-.35202.52799-.35717.84573h4.4c.1553-.01159.3013-.07874.41141-.18924.11012-.1105.17704-.25699.18859-.41283V.922517c-.04769-.156677-.13884-.296495-.2628-.40311-.12396-.106615-.2756-.175622-.4372-.198954h-4.4c-.39402-.013399-.7868.051263-1.1559.190291-.3691.139027-.70727.349692-.995177.619946-.287907.27026-.519903.59481-.682726.9551-.162822.36029-.253277.74925-.2661924 1.14464V17.1782c-.028979.3991.0246358.7998.1574724 1.177.132837.3772.342022.7228.614399 1.0149.272374.2922.602054.5246.968304.6828.36624.1581.76113.2384 1.15982.236h4.6c.07349.0151.14942.0133.22215-.005.07274-.0184.14043-.053.19805-.1011.05762-.0482.1037-.1088.13483-.1773.03112-.0684.04649-.1431.04497-.2183Z" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" transform="translate(0 .320435)" d="M0 0h20v20.0688H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </label>
           </fieldset>
+          <fieldset class="form__story-cat">
+            <legend class="form-legend story-cat__legend">Комментарий</legend>
+            <span class="story-cat__text">Расскажите обо всех повадках кота</span>
+            <label class="story-cat__description">
+              <textarea class="story-cat__field" name="story-cat" cols="20" rows="5"></textarea>
+            </label>
+          </fieldset>
+          <fieldset class="form__user-addition">
+            <legend class="form-legend user-addition__legend">Дополнительно</legend>
+            <input class="addition__sugar" type="checkbox" name="user-addition" checked><label
+              class="addition-info__sugar-text">сахарозаменитель</label><br>
+            <input class="addition__water" type="checkbox" name="user-addition"><label
+              class="addition__water-text">питьевая вода</label><br>
+            <input class="addition__milk" type="checkbox" name="user-addition"><label
+              class="addition__milk-text">молоко</label><br>
+            <input class="addition__vitamin" type="checkbox" name="user-addition"><label
+              class="addition__vitamin-text">витамины</label>
+          </fieldset>
+          <button class="statistics-form__button button" type="submit">
+            <span class="statistics-form__button-text">отправить заявку</span>
+          </button>
           <span class="statistics-form__description"><sup>*</sup> <sup>-</sup> Обязательные поля</span>
-        </form>
-      </section>
-    </div>
+        </div>
+      </form>
+    </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__wrapper">
@@ -161,20 +156,6 @@
             <p class="contacts__text-adress">ул. Большая Конюшенная, д. 1<sup>/</sup>8 Санкт-Петербург</p>
           </div>
           <div class="contacts__map">
-            <object class="contacts__map" data="/source/img/location-mape.svg" type="image/svg+xml" width="320"
-              height="362"></object>
-            <a class="map-image" href="#">
-              <svg class="map-image--icon" width="57" height="53" fill="none" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path fill="url(#a)" d="M0 0h57v53H0z" />
-                <defs>
-                  <pattern patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#b" transform="scale(.00885 .00943)" />
-                  </pattern>
-                  <image width="113" height="106"
-                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAABqCAYAAACLb76IAAAa60lEQVR4nO1dCZQU1bn+blVv07Oxb49d9k3AnU2CW9BowIVoNJKTqJEkmrywqJgQUBG3uD+UxZigKJ5gVIwgS9CRXXZBcGCAYXOAYZmZnt676r5TNbdm7lRXdVd3Vw9D3vvOqVP7vbfuV/9///vfjVBK0cjhBNAXQH8AvQF0BtAJQHO2uQHkAwgD8AOoAOBjx4cBlALYC2AXgG8BRBv7B6eKxkiiCOByAD8EMBLAZQBybAo7CGAzgC8BfA7gawCSTWGfNzQWEgmAEQDuAnAbgBYNFO9pAB8CWASgCECjV0tGON8kNgFwP4BfAbjofCYEQAmAuQDmMZV8weB8kdgawCMA7mPlWWOCUp7OB/AcgBMXApENTWIegKkAfgfA25ARp4EAgFcBzARQ3ZgT2lAkKmXezwA8A6BtQ0RoI8oAPArgncZaZjYEiZ1ZWXNdtiPKMlYCeIBVWRoVhCwn5h4AO/8DCAT7hp3smxoVskWim1l5igoqaGwfnQEK2DfNY9/YKJANddoGwMcArmgsH5klbAIwpjFYsHZLYi8A6xsbgZH1XyK4cL7dwV7BvrWX3QGnCjtJHMS8Hl3sCtD/6iz4X38WNBLOKJzQvxZDOnLQrmTx6MK+eVA2ArcKu0hUnNP/BtDKtpTFooju2obo9k0ILno77WCk40cgn/we0vdHbUuaDso3r2Z5cF5gB4kdACwF0NTOD5DPngbkGt905KuVkE8cTyuc2L496p4G/KDVPjuTyKMJy4OO2YogERwZvt+S/YXt7U4YDQS4E4rwF5/Dff0toJXnIFf7VEJoOATEYqDhICDJ9d4nbjfgcCK64+vaa9KpMjjysubla8+00RAA5dmKxAiZkOgCsARAt2wkTCWGQ3jVZ+qWCeSTZUDXHtlIroZuLE+uVhRINiPikYk6fRbAlfYnKXtQVXT2cSVznjcY0iVxDHNiZw00Yv+PTCvOZTPJPB5medQgSIdExRf6V+bUzh4C6RkyiSAfWwJavgigsWznLWF51DnbESENEglzOdlqidZDsBhy8XjIBx6yPWi5sgpy8b2QtvYGPTE322Q2ZY7/7P7saZB4L4Brs5ISyQ+59DFI2waBlr8PGrHfrUuDzN0ZOgy55LeQt18KWvml7fFwUJzm47MZAVIksYC1B9oO6tsIadsA0GN/qZMOav8PXEuidh7YA3nX9ZAP/B6QQ9n4NAWzst0IkAqJjzPntq2gx1+C/M0oIKzzqGSDxKhxjYqWzYa8cwgQOmR7nCzPpmYjYA1WSVT6xPzW1pipBLnk15APPWJYNtGoaGt0deGaEOnfDWnncNDqbdmI9iGWh1mBVRIftbVPjEJg8T2gJ9JrWZAzaT6LJfg5oqdUrUCr1qcfvjG8LA+zAiskNmG90myDIoH09IeJg5PMM/ursnKsO2Fccd9f6cPpkHmrB00Qrgo5APnbW0D9u+z8ZLA8bGJ3oLBI4n2sl5otoEdngp5M3ipBJfOkDWrRFB+UHMGW8vqVd0U+F+47jLJAhkaKVAV5941AxNb23jzWx9Z2JGvZV6yLfXb5R2nFF5B3j1Z+96TPhrf3QGSH/X7O3DtWQ8gLWHgSIIUjIfRbBhDbymelg3IPu3vNJXOAX22bgzt2BvK+n1siUEXEaX5PkEFyJBAvIHhFkFwXiNsFuFwgHg9IjhfE7QWcrtpXiMMFuHNASFFdOMQJUnAlkH8ViLcP4OkEiHmgJ95WLValDkmPPQPS4fFMvpxHN5antlZOk0nim6yLfcaQSyaAnnjLcjDRA5dCOtsJQrMmEJq3htCyI4RW3SG07AmSV9f2fPjwYcyZMwfRaBTTpk1Dfn7ipqZYUXNIp4fDNfxOkOY3AaLB84rhtWcM6LnlgOCGOHgn4OlqRzYomAPgQbsCQxISRdYJKOPBLbR6K+QdQ1LSIkKn6SAdklevJk+ejBdeeAG5ubkqoc2bNzd9NrJpDYJ/mw3XiOuQc9cv4h+IhRD5ajacg24DyS9AbMMwELIfpOkNEPp+ajntSXCa1R1tG42VSJ1eadfoJFo6rT6BnotAvL2AWCUgVYKyvXJOIw4Qp6SqNSuYNWsWOnbsiMGDByckMPzlcgTfnQuxbXt4xt4Vdz+65R0E3/8AcoULwoovkD/jPZA2LyH4/pNwX7wRpOMmkHxb+n8peXoVgLV2BIYk1un1dkRAq7eDVqysPScFwyAO3gahz0cQBqyGMGgrxMtKIF5ZDnFYBLEzr8L3t5vgf7dM7WdjhE8X/6P2qsPhwA+uHoGhQ4dCkiQsWrQo7g2lV0DwnTkQmjRF7h+mgXjqhjtSfzkCr9wF/xsfqQQqkMudCL79W4jdr4dzwHD4lwxHYP4sUL9tQzJsyVsN4vTp083uzWAjcjMCVTwygd01QTgKIfZfCTiamQbp6HUxYsXfIrbvO0hHD8M56AoQsb51GFi9DO/Mn4+gJGPZ+wux+/0F2HKiHGvWrMHtt98Or7fOLxEpWqESSPIKkP/oTAgt6srT2N7P4H/hT4gdiVfzUlkYjm75cA37FaJbFyJ2wIHI2lUQW7SB2K5DptmiWP1/yzSQ2sBMykQXG6OX2QhdqRrSpvZqBVqBcNErIG0nJH1N6T/je/oxtZeao3tv5D48FcSbW3s/VvIdfLOm4ogvgNZeNzyiiPw/PQ+xc/0hjtFtG+Gf/TxIbj7yJs+A2L7unwx//DiCn+0BZHMfraOngLwpixH7bhmqn59Xe911+TDkjJ9QT6JTRJBV/G1p+TZTp33sGGJNzyyp8YCcLUB45wiQVjXGRGTdHFQ/MQZVk29G9azbEP7kT5DPHqh9j+TVZLrQqi1i+/eimhGqwXFRT4it2qJTvlclUEHs4L56cSvS7J/zkiGBwb/ej+CnexMSqKa/siaPHb1GQ2xVl9+Rr9fCN2MSpGOH082aHJbHtsCMRFv6UMrHPkNo7cXwfzICriH3AaIbgTfHI/DX5YgdFiCfdSJWQhFc8i2qpkxC9ZNjEV76BKjvBISmzZE/dRbELt0hlR2D74nJiG7ZUBMwIXHGCQ3WSPvp06fVzPW/NgtCQSHyHn2qPoF/n4DwujOW0k8DNVpKOvAFpFOuevfkU2WonvlIXZpSh239VM3KxDsBDE87VFlCeNVSBBZuhFTeBI7OFJ6fPIXIv/+C0PISk5cI5AqC2N4TCK/8FHLZCriGjIN7yEjIVZWQDhQjumU9aFUFHL0HwNGxi0qmVFoC4vXCO248JI8Xb/75j+i/9nMILVshb8oTEFvUNR5Ih9Yg8M4qy59BwyJo5VcILV0GGjTw2kiSmibicqlqP0UUsy6OGcOsipF2V3zpUAkCC96AdOQQq2oC7tG3qvvw6iJrvSQlAdFtZwE5pvYd9Y6fAOfASxF8d55aVVBUpfeB/4bnlnHqpuHNKRNxd8UxOIePQs5P71Mzl0eseE3K3xMuKmMmgjmCi9+B7KtEzh3j1R/LImzrf2OmTlPuyayos+B78+Gb+QgjsAbEG4Hz0p8BUhjSKett0DQqQCrdWHvuvPgy5M98DZ6bblO7HvqemoLw8k/UjsUK1s95HaOOF2NXz4Hw/vzXcQTWBGrR5ZcGwsuXqPVQWG8ms623uJlYpFTJV8dLLJwP+Vx8WSO299QcyBKIg4KmYI9J+9ZB7Dqs9py43PDcejfc19+M8OplqtqVjqxHhb8MZ9d9jwWiFxNuuDmVpNsKRUsokphzzwNWgrVtmhcz0TCvyHGQKyvg/5/n1JFLRgSq0H5Mpxdil8RqSY/YweK4a0ePHsVvpjyKVXIEeXdtRSxvAf740Wp0+vFa7N73FXoXrkBxcTHeeOMNxGJZ75oIUlAIsUs3OHr2hdixi2q5hpZ8YOVVc/dSijCTxKSjYCMbv1LVZzIvRqxEgm/azWqfGemkkFK3Hun42bhrCxYsUL0ym9Z+hNGzz2DKYg+uGSWhY2uKk+cIbhv/FLbufxErVqxUvTnZAMnxwH3NzXANHalWg/RQjC8LsG2ksdlXmjYFyOfOIrhwLqLbvzZ7pD4U8o4naFZKAKm8xgIE57EZN24cdm5bjx/1+xJvL3PCIVLceU0U3x4ScOeoGDbtEfD8pJ7o169fXMAktzCtdPAQW1Yg93fPQWh7qekzpMBSA75tDe1mYmFYckXWrYZv2u8Q2/ONXfEnhiRAOli/v0v37t3xwVsT0buTjPdWOnHtJRJKjgvo20VGh1YyenWScde12ZkRRGhWhZwfboDQtKFmLbMGM0n0Gels11VXwzV0VL1rNBQE9VWprjLZ74N86gRixbsR3b4RkDLPzNj+DRC716+yVoSa4ZfPehCMAA+/6sbGNwPYtk/Eh0UOfPRUEK8tljChVwQuIws1XQgUOVdvB3FIgMOW4XG2edPNJNF4NKYQX+FV/IdCy9Zq4e7sNwjuUaORO2Ey8h/qCbFNfJmWKvTGjSzLePmNj/D78d2wdV4AHVpRuBzAxNluvPibCP74lhvX3PSgvQQqdlnX4xCa+Gp810YNyakjszHsHFIjMZWAW/eF9/qN7MPTh2xg3MyYMQO/mLwUpyKDVBU64UUPpt4TgdPlxLsr3Ni8x2RKU5I+sc6LjtUcuDtkFA4Ha74/CzBTp5mPAcvpBogy3JcUI/hvcyMgGRTjRhnmplXeBYH9d86W+CY0GVtL/oDxt/fHDXeOAWl2Iw7dWKi28huBkOQGlpAXBPGGQANuyNWsSUuUIbapyXOS0zOjbOFg22hiMxLTds9rILn91Y5IYruatBJPBGLLc6p1JzStgpAfABwSovs7ILKzu3lAinV7aDMcPYfG3dqxYyf6DRiMx55eXNvmmJtISBzmvdYU4nJGboPYuk7yacCD6OE2kE81VctEFXkDrWVActg2nYcZiXszDlnwguRfBlStR+7YIlO16h5cDOlEc0gnzf0LiufGiMSysjLMnTsXomitSyFxmktizqgt6g9W73lvCK7epUDvuuncSOEIS3FZQOZ5zGBWJu63JfTCkeouWbkotjXozS3IENudhqvPIRDReKDLpEmT0LJlS8vJIQVOODqXxaVHkT49gcYBuEAK4n+mNLHProDMJPE7OwInLW4HPfp00ueEgvqdeV19D8E1cB+Iq8ZAIXnGEtSzZ2rlk9DMjZwfbFWPadiJ2OG2iOzpArGVNROANLvBcgcuC4j3KaYJMxL3sS4EGbXuk9x+ILkDQP2JnQNCvr/meWcMnhE74OhYv/s8DexV+4Km3RNblhD57nPESj6Em2lt4o7C2eMInN2OQq6yRgxp+dP04o9HsCEkMcJmrc+4ACCtfw568A8JnxEK/CDeMLzXbVK9InGQw0DoAJBjvVt/7OhmhDd/jNDunYgcCEAOOuDqcA7usfrIqbVqkKsNSLMfWY4/CTbbOUVKIg/xl3aRiCNPATHzir9iuXpvXFdjsZpAGT9IEpAonTmI8JZ/IPzNZoT3nYVUyX9azbHanzVNCO0eVnuD24QiuwJCEhJXAJiWcQxiHoT2EyGXJh7PkIhAqCr1WxDcWnsunSlBZOe/EN6xAeGScsROx5MWF4cnzaYpR3OQtraMZtCwws7AGqQbP+QgpK19gfCx9IOgVyF0eACih48gctgHqSL1ZqbcS44gf2jq1TOh22yQNrYN0bS9G3+ixj2JLfxhQyw5EC56LaMgpNO7ULWkGMGdwbQIJKIM76Wpz9xC8i4BaWMwbiN9/NPuVXGStdDG94lPE6TZTSCt7037fWcLf0ZlWv6NveFoluIyUWIuhJ5/t3tuX9vyVEOy1BWxgZH2RNb1ZcCb5kS9hMLZOj1nuqe/B/n3vAQaTM2HIXR9JSWL2AJK7B6bCAskUjYrkj0Q8yD2+Vg1FNKBs41B9SMJPL1FNHt0Uc0UK3LQ8nvkv36fkeYwwbxsrK1hRU/Ms3WFFk9XCH0/AcTU5+dxta20/KyiegtGFaPZQ/eDOL3qGEnL77a8C0KXZ1NOXxJU2yoQHKyQWMHWTrINJP9yCP2WAo7UJpNwtquEs13yaoK7yxm0uHszvP3KAE9NH13q22wpDkX6hB5ZmX/wrWwtJGZ1SQXFJD5g9/pO6rRce8YAIeuLvgj9VyNQtBJV/1wDOVDfShWbBFEw7ADcXTWHOoF41RlVjcvfjEw6Pw1pPwlC55nZIDDAVqXLyvILVs0uJfLX7Y5cmexAHLgBpOlo6y/5NiD3lhlo8+ZHKBzbF0J+FEJuWFWdLe/5miMQNVKoOKwlP6hvi3mYYgGEXosgdH46W5Mivp4tAgkhKS1uUsA877bP76aU9bRsLuTSqYCU2AJVqirKKOPaN6MBSOuagTjiu+iT5j+G0PsfoGc/g7xH7zRlzzS5DkK31wGPbStB6HGSTXuSulWWBISN+0ilAqQk4jG7E1IDorq1xEt2M4vQPFmqSqR19UXFaCEeYyOJsFZ4enZZ/E1PZwi93ofQ77NsEgg2HZgtBKpSx20aUq3FKjVf62PDUoWrLYTu8yEO3lHjODfqkBQ7B+rfUf+amaWbO1Ad5EpPc93qvb0h9Hgb4iV7QFrclrVPYVjF8iyrSJVEyqa2yu5yrd5eELrPhXjFkZoh4mqXCC6pFfWH9RETK1dty1TmUFW6irS5H8KAInVOGtLqbuWlrH4C62x2f6b1QiPJi3smzQW/xjAfYNanRq6FMj1K1VpQ39cgYh5I+8m1t+Rd16qDQZWJHRSpJEpPO6U+2vUvoKHSmtmiGhZKpt7KFj5LGYkIM0Imq7a9wmad/3/E49V0VitIlbza9zIg0cV8qxfU2hgNgI2pLm6SLnm172e4fqLS1WxDI1hevbHgEFuSz1LH4EzJ05BpG4uS2Jsbem2kRoyfWMmLZIZKqrCjoWwvWzqgwZZ/aaT4JesAZQgrVma6UEO0aUlaZSHIz21dQ/HCgJJ5P2JL7xkiG8TxqBe6DWQqk7kss2NOuAsESpPK5QC2GyU32+TVxpPsgTSI/b+yMHQV+2m/5y82FHE8kpaJaehyxVs/krWf/adiD1vnopbAbJV3VpCSYZMCoSE2i//PsuG9P89QfKF92TeeV/I0ZBy7BXXbmfUMuCbTuM4zlA+9lxDybmNLmK2/UAJCCVvxTVn8Kn7il8aPYCQSGeR2u/lBMNmZoiMN2NqhMoFqoUwN9WJLtVpbmKJx4GhpaWk7t9u9X/fTkwRbXNZw24UJRUJ1WxtK6cuU0mraiCHL8rrRo0cro2ic3OZgm8htgu5YYKQJuvNUiLeM8/JnKIQqEkspbcra3B5obP7XUCi0ICcn59dMi2gbMVidRX9OuT3l8thM/aZ6vVGh9i+cPn26UF1dfW0sFptHKS0/z7Ipnzx58s9sIFEztqys0upcyPoZKZPY5HKblw3G9bD52tyshcelk1i99IopSKoGQ6FrCEnUx2GWUOWjSP/+/V3vvffepe3atbshLy9vqNPpHEgI8TRAOhXNIK1fv/43w4YNW868MWCDX2QmMdpe6+TDX9Nv4M71x8TgXlxyTM6J/p5dJBoRBR1JmhElcGWIduzg/lZtc6pzIrRu7X3ooYd6DB48uHu7du26FhYWtsvPz2/tdrsLXS5XgSiKLlEUMx79Kcty8JlnnvnF448//h0jUGZkRTnSJANSeRL569CpWu2YJ8CISDPyoFPPtUiXRKukER1hGlFER5aLO9YbEppqcnLPOGrnpq6TYpFS+mI6HxMKhc6MGjXq/g0bNpxlBGqbxBEJjlCJI0DSEaqXTCNJRYJr0B2bSqB232pvITOzGZyE8cTpLTZRL2Fc2UG48sSlK1P0m/a+3vqT060ulZeXH+ratetj1dXVlJVzUY4sjUwH24ssrijLUO0a5SRU0hGkP+clUjvXE0S5a4kETX0nEYmJ6jv8MTUwrTVJ0TKclyQXJ3EObp/DXc/hpJAn2637QbT40rLkdu3atWXAgAFz2E8ksngiHJEyR2iEk0IHt+clMMbSxBNIdGRqkE1IStlaTaXfHm8q80RqZZqgK+8cOhXIb25uc3BkeTliczipdbG9hwsbOulLpWigixcvXnXHHXd8zuKMslkPZRZ2lJGmSVuYk0btWlRHXozLD1k3GljmrhOdioROUsFdMzrW36stn6hJ4HwGUZ3K5A0VcJIpGhgqIieBLh2ZTkYOf8+rq1y7uLDc3N+unNNU1Kksy3T69OmfPvnkk9/o1KeT7TWy3ByZDk4aZY5Uvrzk84pXoYLOwCEGxhBPTCLyDK85dC+bFp4GqhQm9Rsjr4Xe6vToiHSwa/q6Fu8h8XBqFdzPYRnRaDQ2bty4Dz/++OMyFp6DI8mtU6UaQdp17TltnlKZM360dPDqk3LPmW2JqiaJiIwjMSHLOtJgkEDRhEC9SuUl1Mj65MtKQUc0L5Haz6H18Rd1aTKEz+cLDRo06NMDBw5Us7A1tejk1CF/HGbnYV05KHIE89ZqWGcMxbhzyYBEszqkJeISkagPxKwc5Mk1Kphlg+f1CePJdun2PMEO7r5eTSvgpcAQpaWlvj59+qwKBoOUKwPBESdx0hbWlWE8GSHdc2F2HOPKyWTkwUDyjPLHMpIZNka+P8pJg95vyJMa466B+4NhULfSyiCJI5YvgwXOyBE5yeTDNiwTi4qKTo8cOXILZxRFuTJVez/ESZQmhSE2A3M1m4styK6FuPtGdUo9cUbqMiPS9LBineorm3zBTHSqlTetJd3aD9pzvJVGdJmvWac8kTL3Li+lerLjhlDNmTPn+IMPPniQWbpafY//caIcOQphftZMVsXOq9i5nyMvzBHHE6X31iTzxNiGVKoYRmYu4UgVOPJE7pw3HjQ1pBkLIc6YyWUZo13PZ+deXWYJnETXemt4ta5M9j5x4sSDL7/88kl2PcIR5mdpUCSskpFUyRHHS1+AU6FRA+ISEZQ10vRIZ3yXWZ1F20s6y1TUWahOnRGjbR5GmIdrFchjx7lc3TGXu6+EkcMTG4lE6NixY79bunTpGUaYRsg5RpBG2Dl2XyMtwDZN2qK6ci0ZaecNmQ7SM9LxfFlp5EvV+1H1TgAXR6jmAMjlznO56ojWDKRKYnV19SVDhgz5fNeuXecYcT5GlkLoWUagJm1BTkXyHhq9m6zRkaZHQzUKG1m0Rk5yvZ/VpSPXzdUX3ToLVmjbtm1OWVmZJk1BJmEVjLwQuxZJIGFo7IQZoaFITBa/USsIb5kaNV/pnQqEMyxinHRFdRYjLkSiEuF8k5gIiZq7EqHBrMJGAQD/C1fQ7nMLzLe/AAAAAElFTkSuQmCC" />
-                </defs>
-              </svg></a>
           </div>
         </div>
       </div>
