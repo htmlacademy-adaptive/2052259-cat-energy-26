@@ -1,1 +1,5 @@
-body { background: #ff0000; }
+@import "./modules/variables/fonts";
+@import "./modules/blocks/page";
+@import "./modules/blocks/header";
+@import "./modules/blocks/main-headline";
+@import"./modules/blocks/weight-cat";

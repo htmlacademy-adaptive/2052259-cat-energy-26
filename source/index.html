@@ -4,24 +4,24 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link href="/source/css/style.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo">
-      <img class="image" src="/source/img/logo-mobile-cat.svg" width="33" height="38"
+      <img class="image" src="./img/logo-mobile-cat.svg" width="33" height="38"
         alt="логотип кет энерджи картинка">
     </a>
     <a class="main-header__logo main-header__logo-text">
-      <img class="image" src="/source/img/logo-cat-text.svg" width="101" height="18" alt="логотип кет энерджи текст">
+      <img class="image" src="./img/logo-cat-text.svg" width="101" height="18" alt="логотип кет энерджи текст">
     </a>
-    <button class="main-nav__toggle button" type="button">
+    <button class="main-nav__toggle toggle__active button" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list main-nav__list__opened site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link">
               Главная
@@ -44,12 +44,15 @@
   <main class="main-container">
     <h1 class="visually-hidden">Кэт энерджи – интернет магазин сбалансированного питания для кошек</h1>
     <section class="headline">
+      <div class="headline__hero">
       <h2 class="headline__slogan">Функциональное питание для котов</h2>
       <p class="headline__text">Занялся собой? Займись котом!</p>
-      <img class="headline__hero-image" src="/source/img/hero-index-mobile1.jpg" alt="логотип продукта">
-      <a href="form.html" class="button headline__button">подобрать программу</a>
+    </div>
+      <img class="headline__hero-image" src="/source/img/logo-food.svg" alt="логотип продукта">
+      <a href="form.html" class="button headline__button">
+        <span class="headline__button-text">подобрать программу</span></a>
     </section>
-    <section class="weight-loss">
+    <section class="weight-cat">
       <h2 class="visually-hidden">Описание программ питания для похудения и набора массы</h2>
       <div class="weight__wrapper">
         <ul class="weight__list">

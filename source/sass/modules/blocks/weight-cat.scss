@@ -1,0 +1,13 @@
+.weight__wrapper {
+  margin: 0 auto;
+}
+
+.weight__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.weight__item {
+  list-style-type: none;
+}
