@@ -7,23 +7,24 @@
   align-items: center;
   position: relative;
 }
+
 .headline__hero {
-  background: url(/source/img/logo-background-cat.jpg) center, rgba(104, 183, 56, 0.85) center;
+  background: url("/source/img/logo-background-cat.jpg") center, rgba(104, 183, 56, 0.85) center;
   background-repeat: no-repeat;
   object-fit: cover;
   position: absolute;
-  width: 320px;
-  height: 302px;
-  left: 0px;
-  top: 0px;
+  min-width: 320px;
+  min-height: 302px;
+  top: 0;
 }
+
 .headline__slogan {
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-top: 27px;
   margin: 0;
 }
@@ -35,7 +36,7 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-top: 25px;
   margin: 0;
 }
@@ -44,24 +45,17 @@
   position: absolute;
   margin: 0;
   padding: 0;
-  left: 20px;
   top: 167px;
   z-index: 3;
 }
 
 .headline__button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  width: 280px;
-  height: 40px;
-  left: 20px;
-  top: 440px;
-  padding: 8px 44px;
-  gap: 4px;
-  background: #68B738;
+  max-width: 280px;
+  max-height: 40px;
+  top: 445px;
+  padding: 7px 44px;
+  background: #68b738;
   text-decoration: none;
 }
 
@@ -74,5 +68,5 @@
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }

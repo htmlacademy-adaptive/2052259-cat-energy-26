@@ -1,0 +1,118 @@
+.catalog-product {
+  min-height: 1775px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.catalog-product__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  margin: 0;
+  padding: 27px 42px 41px 20px;
+}
+
+.product-preview__list {
+  padding: 0;
+  margin: 0;
+}
+
+.product-preview__item {
+  text-decoration: none;
+}
+
+.product-preview__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.product-parameters__description {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+}
+
+.product-parameters__number {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+}
+
+.product__button {
+  display: block;
+  text-decoration: none;
+  width: 280px;
+  height: 40px;
+  background: #68b738;
+}
+
+.product__button-text {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.product__preview-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.product__continuation-text {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+}
+
+.product__button-all {
+  display: block;
+  text-decoration: none;
+  width: 280px;
+  height: 40px;
+  background: #F2F2F2;
+}
+
+.product-all__button-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  text-transform: uppercase;
+  color: #444444;
+}

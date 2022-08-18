@@ -1,12 +1,9 @@
 .main-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px 17px 20px;
-}
-
-.main-header {
-  position: relative;
 }
 
 .main-nav__list {
@@ -34,6 +31,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .site-list__link {
