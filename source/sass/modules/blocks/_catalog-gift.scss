@@ -1,0 +1,33 @@
+.gift {
+  margin: 0 auto;
+}
+
+.product-gift {
+  min-width: 280px;
+  min-height: 290px;
+  background: url("/source/img/gift-back.png") center, rgba(104, 183, 56, 0.85) center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.product-gift__icon {
+  margin: 0 auto;
+  padding: 59px 0 48px 0;
+}
+
+.product-gift__text {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  padding-bottom: 43px;
+}

@@ -1,0 +1,72 @@
+.headline {
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.headline__hero {
+  background: url("/source/img/logo-background-cat.jpg") center, rgba(104, 183, 56, 0.85) center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: absolute;
+  min-width: 320px;
+  min-height: 302px;
+  top: 0;
+}
+
+.headline__slogan {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 27px;
+  margin: 0;
+}
+
+.headline__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 25px;
+  margin: 0;
+}
+
+.headline__hero-image {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 167px;
+  z-index: 3;
+}
+
+.headline__button {
+  position: absolute;
+  max-width: 280px;
+  max-height: 40px;
+  top: 445px;
+  padding: 7px 44px;
+  background: #68b738;
+  text-decoration: none;
+}
+
+.headline__button-text {
+  width: 192px;
+  height: 26px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
