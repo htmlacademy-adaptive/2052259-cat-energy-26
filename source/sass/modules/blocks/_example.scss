@@ -1,8 +1,26 @@
+.example {
+  @include desktop {
+    padding-bottom: 64px;
+    display: flex;
+  }
+}
+
 .example__wrapper {
   min-width: 320px;
   min-height: 659px;
   margin: 0 auto;
   background: #eaeaea;
+
+  @include tablet {
+    border-top: 1px solid #e6e6e6;
+    padding: 0 30px 70px;
+    background: #ffffff;
+  }
+
+  @include desktop {
+    width: 50%;
+    border: none;
+  }
 }
 
 .example__caption {
@@ -10,10 +28,20 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
   color: #000000;
-  margin: 0;
-  padding: 25px 105px 40px 20px;
+  margin: 0 0 23px;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 42px;
+    margin-bottom: 65px;
+  }
+
+  @include desktop {
+    margin-bottom: 146px;
+    padding: 57px 0 0;
+  }
 }
 
 .example__text {
@@ -23,8 +51,30 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-  margin: 0;
-  padding: 0 20px 20px;
+  margin: 0 0 25px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+    width: 700px;
+    margin-bottom: 52px;
+  }
+
+  @include desktop {
+    margin-bottom: 68px;
+    width: 435px;
+  }
+}
+
+.stats__wrapper {
+  @include tablet {
+    display: flex;
+  }
+
+  @include desktop {
+    width: 435px;
+    flex-wrap: wrap;
+  }
 }
 
 .stats {
@@ -35,12 +85,30 @@
   padding: 0;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 0 33px;
+
+  @include tablet {
+
+  }
+
+  @include desktop {
+
+  }
 }
 
 .stats__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  @include tablet {
+
+  }
+
+  @include desktop {
+
+  }
 }
 
 .stats__number {
@@ -50,6 +118,22 @@
   line-height: 24px;
   text-align: center;
   color: #000000;
+  width: 122px;
+  text-align: center;
+  padding: 13px 0 18px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 37px;
+    width: 162px;
+    margin-right: 40px;
+  }
+
+  @include desktop {
+
+  }
 }
 
 .stats__description {
@@ -60,6 +144,26 @@
   line-height: 100%;
   text-align: center;
   color: #444444;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  min-width: 80px;
+  position: absolute;
+  top: 45px;
+  background-color: #eaeaea;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+    top: 55px;
+    left: 45px;
+    background: #ffffff;
+  }
+
+  @include desktop {
+
+  }
 }
 
 .example__text-expenses {
@@ -72,8 +176,51 @@
   color: #000000;
   margin: 0;
   padding: 20px 66px;
+
+  @include tablet {
+    margin: 0 0 0 auto;
+    font-size: 20px;
+    padding-top: 8px;
+    line-height: 29px;
+  }
+
+  @include desktop {
+    width: 435px;
+    text-align: left;
+  }
+}
+
+.example__text-price {
+  @include tablet {
+
+  }
+
+  @include desktop {
+    margin-left: 40px;
+  }
 }
 
 .fat-cat__picture {
+  display: block;
+  width: 320px;
+  height: 240px;
   padding: 0 20px 40px 20px;
+
+  @include tablet {
+    width: 690px;
+    height: auto;
+    left: 18px;
+    top: 3px;
+    margin: 53px auto 20px;
+  }
+
+  @include desktop {
+
+  }
+}
+
+.image-slider {
+  @include desktop {
+    width: 50%;
+  }
 }

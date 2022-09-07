@@ -1,21 +1,48 @@
 .gift {
   margin: 0 auto;
+  @include desktop {
+    padding-top: 135px;
+  }
 }
 
 .product-gift {
-  min-width: 280px;
-  min-height: 290px;
-  background: url("/source/img/gift-back.png") center, rgba(104, 183, 56, 0.85) center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  background-color: #68b738;
+  background-image: url("/source/img/gift-back.png");
+  width: 280px;
+  min-height: 225px;
+  padding-top: 65px;
+
+  @include tablet {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    padding: 0 90px;
+    box-sizing: border-box;
+    align-items: center;
+    background-image: url("/source/img/gift-back-table.jpg");
+  }
+
+  @include desktop {
+    flex-direction: column;
+    width: 245px;
+    box-sizing: border-box;
+    padding-top: 65px;
+    background-image: url("/source/img/gift-back.png");
+  }
 }
 
+
 .product-gift__icon {
+  display: block;
   margin: 0 auto;
-  padding: 59px 0 48px 0;
+
+  @include tablet {
+    margin: 0 auto 0 0;
+  }
+
+  @include desktop {
+    margin-bottom: 65px;
+  }
 }
 
 .product-gift__text {
@@ -24,10 +51,26 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
   text-align: center;
   color: #ffffff;
   margin: 0 auto;
-  padding-bottom: 43px;
+  width: 161px;
+
+  @include tablet {
+    margin: 0;
+    text-align: left;
+    padding-right: 24px;
+  }
+
+  @include desktop {
+    text-align: center;
+    padding-right: 0;
+  }
+}
+
+.container__addition-gift {
+  @include desktop {
+    display: flex;
+    padding: 0 40px;
+  }
 }

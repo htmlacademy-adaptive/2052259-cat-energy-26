@@ -6,16 +6,49 @@
   flex-wrap: wrap;
   align-items: center;
   position: relative;
+
+  @include tablet {
+    min-height: 780px;
+    position: relative;
+  }
+
+  @include desktop {
+    min-height: 550px;
+    position: relative;
+    display: block;
+    margin-bottom: 82px;
+  }
 }
 
-.headline__hero {
-  background: url("/source/img/logo-background-cat.jpg") center, rgba(104, 183, 56, 0.85) center;
-  background-repeat: no-repeat;
-  object-fit: cover;
+.headline::before {
+  content: "";
   position: absolute;
-  min-width: 320px;
-  min-height: 302px;
+  z-index: -1;
   top: 0;
+  left: 0;
+  width: 320px;
+  height: 304px;
+  background-color: #68b738;
+  background-image: url("/source/img/logo-background-cat.jpg");
+
+  @include tablet {
+    background: 0 0;
+  }
+
+  @include desktop {
+    background: 0 0;
+  }
+}
+
+
+.headline__hero {
+  @include tablet {
+
+  }
+
+  @include desktop {
+
+  }
 }
 
 .headline__slogan {
@@ -27,6 +60,19 @@
   color: #ffffff;
   padding-top: 27px;
   margin: 0;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: left;
+    width: 420px;
+    margin-bottom: 42px;
+  }
+
+  @include desktop {
+
+  }
 }
 
 .headline__text {
@@ -39,34 +85,83 @@
   color: #ffffff;
   padding-top: 25px;
   margin: 0;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+    width: 420px;
+    margin-bottom: 64px;
+  }
+
+  @include desktop {
+
+  }
 }
 
 .headline__hero-image {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 167px;
-  z-index: 3;
+  position: relative;
+  width: 280px;
+  height: 270px;
+
+  @include tablet {
+    position: absolute;
+    z-index: -1;
+    left: 30px;
+    top: 230px;
+    height: 610px;
+    width: auto;
+  }
+
+  @include desktop {
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    left: 460px;
+    width: 552px;
+    height: auto;
+  }
 }
 
 .headline__button {
-  position: absolute;
-  max-width: 280px;
-  max-height: 40px;
-  top: 445px;
+  display: flex;
+  width: 100%;
   padding: 7px 44px;
   background: #68b738;
   text-decoration: none;
+
+  @include tablet {
+    width: 244px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 26px 14px 26px;
+  }
+
+  @include desktop {
+
+  }
 }
 
 .headline__button-text {
-  width: 192px;
+  display: block;
   height: 26px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+
+  }
 }

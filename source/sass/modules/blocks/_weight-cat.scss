@@ -2,91 +2,28 @@
   margin: 0 auto;
   min-height: 592px;
   min-width: 100%;
-}
+  padding: 0 20px;
 
-.weight-loss__caption {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 37px;
-  text-transform: uppercase;
-  color: #000000;
-  margin: 0;
-  padding: 30px 79px 29px 91px;
-}
+  @include tablet {
+    min-width: 728px;
+    padding: 0 30px;
+  }
 
-.weight-gain__caption {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 37px;
-  text-transform: uppercase;
-  color: #000000;
-  margin: 0;
-  padding: 30px 79px 29px 91px;
-}
-
-.weight-loss__text {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
-  margin: 0;
-  padding: 0 33px 23px 20px;
-}
-
-.weight-gain__text {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
-  margin: 0;
-  padding: 0 33px 23px 20px;
-}
-
-.weight-loss__button {
-  text-decoration: none;
-  max-width: 134px;
-  max-height: 24px;
-  padding: 15px 127px 18px 19px;
-}
-
-.weight-gain__button {
-  text-decoration: none;
-  max-width: 134px;
-  max-height: 24px;
-  padding: 15px 127px 18px 19px;
-}
-
-.weight-loss__button-text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.weight-gain__button-text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000000;
+  @include desktop {
+    padding: 0 40px;
+    margin-bottom: 46px;
+  }
 }
 
 .weight__list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   margin: 0;
   padding: 0;
+
+  @include desktop {
+    justify-content: space-between;
+  }
 }
 
 .weight__item {
@@ -97,14 +34,287 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: relative;
+  @include tablet {
+    width: 708px;
+    padding: 75px 50px 62px 53px;
+    margin-bottom: 28px;
+  }
+
+  @include desktop {
+    width: 570px;
+    padding: 76px 50px 0;
+  }
 }
 
-.weight__line {
+.weight__item::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  top: 24px;
+  left: 24px;
+  width: 50px;
+  background-color: #68b738;
+  border-radius: 50%;
+
+  @include tablet {
+    width: 200px;
+    height: 200px;
+    top: 90px;
+    left: auto;
+    right: 60px;
+  }
+
+  @include desktop {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    left: 52px;
+    right: auto;
+  }
+}
+
+.weight-loss__caption {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #000000;
   margin: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 0;
-  height: 0;
-  border: none;
-  border-top: 1px solid #d9d9d9;
+  padding: 30px 52px 29px 91px;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 37px;
+    width: 380px;
+    padding-left: 0;
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    padding-left: 165px;
+    width: auto;
+    margin-bottom: 75px;
+  }
+}
+
+.weight-loss__caption::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  background: url("/source/img/cat-slim.svg") no-repeat;
+  top: 22px;
+  left: 24px;
+  width: 50px;
+
+  @include tablet {
+    height: 200px;
+    left: auto;
+    width: 200px;
+    right: 31px;
+    top: 80px;
+    background-size: 140px 194px;
+  }
+
+  @include desktop {
+    width: 70px;
+    height: 97px;
+    top: 40px;
+    left: 66px;
+    background-size: 70px 97px;
+  }
+}
+
+.weight-gain__caption {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  padding: 30px 52px 15px 91px;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 37px;
+    width: 380px;
+    padding-left: 0;
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    padding-left: 165px;
+    width: auto;
+    margin-bottom: 75px;
+  }
+}
+
+.weight-gain__caption::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  background: url("/source/img/cat-pro.svg") no-repeat;
+  top: 24px;
+  left: 15px;
+  width: 75px;
+
+  @include tablet {
+    height: 200px;
+    left: auto;
+    width: 268px;
+    right: 27px;
+    top: 136px;
+    background-size: 268px 112px;
+  }
+
+  @include desktop {
+    width: 134px;
+    height: 56px;
+    top: 69px;
+    left: 34px;
+    background-size: 134px 56px;
+  }
+}
+
+.weight-loss__text {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0;
+  padding: 0 33px 23px 20px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+    width: 380px;
+    border-bottom: none;
+    margin-bottom: 35px;
+  }
+
+  @include desktop {
+    width: 100%;
+    padding-left: 2px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.weight-gain__text {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0;
+  padding: 0 33px 23px 20px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+    width: 344px;
+    border-bottom: none;
+    margin-bottom: 35px;
+  }
+
+  @include desktop {
+    width: 100%;
+    padding-left: 2px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+  }
+}
+
+
+.weight-loss__button {
+  text-decoration: none;
+  min-width: 134px;
+  min-height: 24px;
+  padding: 15px 127px 18px 19px;
+  position: relative;
+}
+
+.weight-loss__button::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  width: 24px;
+  height: 11px;
+  background: url("/source/img/arrow-right.svg") no-repeat;
+  @include tablet {
+    top: 19px;
+    left: 131px;
+  }
+
+  @include desktop {
+
+  }
+}
+
+.weight-gain__button {
+  text-decoration: none;
+  min-width: 134px;
+  min-height: 24px;
+  padding: 15px 127px 18px 19px;
+  position: relative;
+}
+
+.weight-gain__button ::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  width: 24px;
+  height: 11px;
+  background: url("/source/img/arrow-right.svg") no-repeat;
+  @include tablet {
+    top: 19px;
+    left: 131px;
+  }
+
+  @include desktop {
+
+  }
+}
+
+.weight-loss__button-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+
+  }
+}
+
+.weight-gain__button-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+
+  }
 }
