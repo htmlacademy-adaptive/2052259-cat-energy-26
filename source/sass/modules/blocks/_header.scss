@@ -1,9 +1,79 @@
 .main-header {
+  margin: 0 auto;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px 17px 20px;
+
+  @include tablet {
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+
+  }
+}
+
+.main-header__conteiner {
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1220px;
+  }
+}
+
+.image-logo {
+  @include tablet {
+    width: 235px;
+    height: 66px;
+    display: block;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  @include desktop {
+    width: 190px;
+    padding: 3px 0 0;
+  }
+}
+
+.image-text {
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  @include tablet {
+    margin-left: auto;
+    padding: 42px 30px 62px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    margin-left: auto;
+    /*padding: 42px 30px 62px 0;*/
+  }
 }
 
 .main-nav__list {
@@ -15,11 +85,27 @@
   top: 45px;
   width: 100%;
   z-index: 2;
+
+  @include tablet {
+    display: flex;
+    min-width: 440px;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    z-index: 0;
+    align-items: center;
+  }
+
+  @include desktop {
+    min-width: 478px;
+    left: 0;
+    top: 0;
+  }
 }
 
-.main-nav__list__opened {
-  display: block;
-  display: none;
+.main-nav__list-opened {
+  /*display: block;*/
+  /*display: none;*/
 }
 
 .site-list__item {
@@ -33,6 +119,20 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  border-top: 1px solid #e6e6e6;
+
+  @include tablet {
+    min-width: 63px;
+    min-height: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+    border: 0;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
 }
 
 .site-list__link {
@@ -44,4 +144,57 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #000000;
+
+  @include tablet {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.site-list__link-index {
+  @include desktop {
+    color: #ffffff;
+  }
+}
+
+.site-list__link--active {
+  @include tablet {
+    position: relative;
+  }
+
+  @include desktop {
+
+  }
+}
+
+.site-list__link--active::after {
+  @include tablet {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    bottom: 13px;
+    height: 2px;
+    background-color: #68b738;
+  }
+}
+
+.site-list__link-index--active::after {
+  @include desktop {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    bottom: 13px;
+    height: 2px;
+    background-color: #ffffff;
+  }
 }

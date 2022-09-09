@@ -6,8 +6,33 @@
 
 .page__body {
   min-height: 100%;
-  min-width: 320px;
+  max-width: 320px;
   margin: 0 auto;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1220px;
+  }
+}
+
+.page__body-index::before{
+  @include desktop {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 697px;
+    background-color: #65a93c;
+    background-image: url("/source/img/index-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 697px;
+    background-position-x: right;
+  }
 }
 
 .visually-hidden {

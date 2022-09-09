@@ -1,15 +1,146 @@
 .catalog-addition {
   min-height: 604px;
   min-width: 282px;
+  position: relative;
+
+  @include tablet {
+
+  }
+
+  @include desktop {
+
+  }
+}
+
+.catalog-addition::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  top: 14px;
+  right: -35px;
+  background-color: #68b738;
+  @include tablet {
+    width: 100%;
+    height: 3px;
+    top: 22px;
+    left: 0;
+  }
+
+  @include desktop {
+
+  }
+}
+
+.container__addition__title {
+  width: 320px;
+  margin: 0 auto;
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1300px;
+  }
 }
 
 .catalog-addition__title {
-  font-style: normal;
-  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  text-align: center;
-  color: #000000;
+  color: #111111;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 35px;
+  padding: 0 20px;
+  background-color: #ffffff;
+
+  @include tablet {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 30px 0 37px;
+    margin: 0 auto 80px 30px;
+    background-color: #fff;
+  }
+
+  @include desktop {
+    padding: 0 40px;
+    margin: 0 auto 80px;
+  }
+}
+
+.product-addition {
+  padding: 0 20px;
+
+  @include tablet {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @include desktop {
+    display: flex;
+    padding: 0 40px;
+    width: 1300px;
+  }
+}
+
+.product-addition__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 37px;
+
+  @include tablet {
+    margin-bottom: 70px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.product-addition__item {
+  border-top: 1px solid #cdcdcd;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    display: flex;
+    align-items: baseline;
+    border: 1px solid #e6e6e6;
+    padding: 0 36px;
+  }
+
+  @include desktop {
+    width: 895px;
+    box-sizing: border-box;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+    align-items: baseline;
+  }
+}
+
+.product-addition-parameters__list {
+  width: 100%;
+  @include tablet {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+  }
+
+  @include desktop {
+    width: auto;
+  }
+}
+
+.product-addition-parameters__item {
+  display: flex;
+  justify-content: space-between;
+  @include desktop {
+    width: 288px;
+  }
 }
 
 .product-addition__text {
@@ -17,11 +148,24 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  width: 100%;
   text-transform: uppercase;
   color: #222222;
+  margin: 13px 0;
+
+  @include tablet {
+    width: 50%;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding-left: 2px;
+  }
+
+  @include desktop {
+    width: 245px;
+    margin-right: 80px;
+  }
 }
 
 .product-addition-parameters__description {
@@ -34,6 +178,15 @@
   align-items: center;
   text-align: center;
   color: #444444;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+
+  }
 }
 
 .product-addition-parameters__number {
@@ -46,17 +199,41 @@
   align-items: center;
   text-align: right;
   color: #444444;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+
+  }
 }
 
-.product__button {
+.product__button-addition {
   display: block;
   text-decoration: none;
-  width: 280px;
   height: 40px;
-  background: #f2f2f2;
+  background-color: #68b738;
+  border: 0;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin-bottom: 17px;
+  width: 100%;
+  margin-top: 15px;
+
+  @include tablet {
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+
+  @include desktop {
+    width: 245px;
+    margin: 0 0 0 auto;
+  }
 }
 
-.product__button-text {
+.product__button-textaddi {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -67,5 +244,12 @@
   justify-content: center;
   height: 100%;
   text-transform: uppercase;
-  color: #444444;
+  color: #ffffff;
+  @include tablet {
+
+  }
+
+  @include desktop {
+
+  }
 }
