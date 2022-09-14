@@ -1,28 +1,39 @@
-.weight__wrapper {
+.weight-cat {
+  min-width: 320px;
+  width: 100%;
   margin: 0 auto;
-  min-height: 592px;
-  min-width: 100%;
-  padding: 0 20px;
+  box-sizing: border-box;
+}
 
+.weight__wrapper {
   @include tablet {
-    min-width: 728px;
-    padding: 0 30px;
+    margin-bottom: 15px;
+    padding: 30px;
   }
 
   @include desktop {
-    padding: 0 40px;
-    margin-bottom: 46px;
+    margin-bottom: 75px;
+    padding: 0;
+    width: 100%;
   }
 }
 
 .weight__list {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0;
+  flex-direction: column;
+  list-style: none;
+  min-width: 240px;
+  max-width: 780px;
   padding: 0;
+  box-sizing: border-box;
 
   @include desktop {
+    max-width: initial;
+    width: 100%;
+    flex-direction: row;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -177,7 +188,7 @@
 }
 
 .weight-loss__text {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -204,7 +215,7 @@
 }
 
 .weight-gain__text {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -291,6 +302,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+
   @include tablet {
     font-size: 20px;
     line-height: 20px;
@@ -316,5 +328,20 @@
 
   @include desktop {
 
+  }
+}
+
+.image-slider {
+  position: relative;
+  min-width: 280px;
+  width: 100%;
+
+  @include tablet {
+    min-width: 768px;
+  }
+
+  @include desktop {
+    min-width: 200px;
+    width: fit-content;
   }
 }

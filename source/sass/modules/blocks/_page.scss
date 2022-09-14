@@ -28,9 +28,9 @@
     width: 50%;
     height: 697px;
     background-color: #65a93c;
-    background-image: url("/source/img/index-background-desktop.jpg");
+    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("/source/img/index-background-desktop.jpg");
     background-repeat: no-repeat;
-    background-size: auto 697px;
+    background-size: cover;
     background-position-x: right;
   }
 }

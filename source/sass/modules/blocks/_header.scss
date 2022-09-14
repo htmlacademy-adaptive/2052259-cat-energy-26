@@ -17,7 +17,7 @@
   }
 }
 
-.main-header__conteiner {
+.main-header {
   @include tablet {
     width: 768px;
   }
@@ -27,7 +27,7 @@
   }
 }
 
-.image-logo {
+.image__logo-nav {
   @include tablet {
     width: 235px;
     height: 66px;
@@ -53,12 +53,60 @@
 }
 
 .main-nav__toggle {
-  @include tablet {
-    display: none;
-  }
-  @include desktop {
-    display: none;
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 65px;
+  height: 65px;
+  border: 0;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 19px;
+  width: 24px;
+  height: 2px;
+  background-color: #222222;
+  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+}
+
+.main-nav--opened .main-nav__toggle::after, .main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 22px;
+  width: 24px;
+  height: 2px;
+  background-color: #222222;
+}
+
+.main-nav--opened .main-nav__toggle::after, .main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 22px;
+  width: 24px;
+  height: 2px;
+  background-color: #222222;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+.main-nav--opened .main-nav__toggle::after {
+  transform: rotate(-45deg);
 }
 
 .main-nav__wrapper {
@@ -72,7 +120,6 @@
 
   @include desktop {
     margin-left: auto;
-    /*padding: 42px 30px 62px 0;*/
   }
 }
 
@@ -82,7 +129,7 @@
   margin: 0;
   padding: 0;
   left: 0;
-  top: 45px;
+  top: 70px;
   width: 100%;
   z-index: 2;
 
@@ -101,11 +148,6 @@
     left: 0;
     top: 0;
   }
-}
-
-.main-nav__list-opened {
-  /*display: block;*/
-  /*display: none;*/
 }
 
 .site-list__item {
@@ -186,7 +228,7 @@
   }
 }
 
-.site-list__link-index--active::after {
+.site-list__link--index::after {
   @include desktop {
     content: "";
     position: absolute;
@@ -196,5 +238,29 @@
     bottom: 13px;
     height: 2px;
     background-color: #ffffff;
+  }
+}
+
+
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+/*
+.main-nav--closed .main-nav__list, .main-nav--nojs .main-nav__toggle {
+  display: none;
+}*/
+
+.main-nav__toggle {
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
   }
 }
