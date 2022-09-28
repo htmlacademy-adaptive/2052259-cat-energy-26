@@ -5,12 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/fav-152.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/fav-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/fav-16.png">
+<link rel="manifest" href="manifest.webmanifest">
+
   <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body page__body-index">
   <header class="main-header">
-<<<<<<< HEAD
       <a class="main-header__logo">
         <picture>
           <source media="(min-width: 1300px)" srcset="./img/logo-desktop-nav.svg">
@@ -48,40 +52,6 @@
 </header>
 <script src="./js/script.js"></script>
 
-=======
-    <a class="main-header__logo">
-      <img class="image" src="./img/logo-mobile-cat.svg" width="33" height="38"
-        alt="логотип кет энерджи картинка">
-    </a>
-    <a class="main-header__logo main-header__logo-text">
-      <img class="image" src="./img/logo-cat-text.svg" width="101" height="18" alt="логотип кет энерджи текст">
-    </a>
-    <nav class="main-nav main-nav--opened">   <!-- main-nav--opened main-nav--closed-->
-      <div class="main-nav__wrapper">
-        <button class="main-nav__toggle toggle__active button" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list main-nav__list__opened site-list">
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
->>>>>>> 51899171d69e93ff448ba49afc8a4559e070eb44
   <main class="main-container">
     <h1 class="visually-hidden">Кэт энерджи – интернет магазин сбалансированного питания для кошек</h1>
     <section class="headline">
@@ -90,7 +60,7 @@
       <p class="headline__text">Занялся собой? Займись котом!</p>
     </div>
     <picture class="logo-hero__picture">
-      <source type="image/webp" media="(min-width: 1300px)" srcset="./img/logo-hero-index-desctop.webp">
+      <source type="image/webp" media="(min-width: 1300px)" srcset="./img/logo-hero-index-desktop.webp">
       <source type="image/webp" media="(min-width: 768px)" srcset="./img/logo-hero-index-tablet.webp">
       <source type="image/webp" srcset="./img/logo-hero-index-mobile.webp">
       <source media="(min-width: 1300px)" srcset="./img/logo-hero-index-desctop.png">
@@ -169,7 +139,7 @@
           <p class="example__text-expenses">Затраты на питание:<span class="example__text-price">15000 руб.</span></p>
           </div>
           </div>
-          <div class="image-slider">
+          <!-- <div class="image-slider">
             <div class="cat-change__example">
               <div class="cat-change__img-container">
               <div class="cat-change__img cat-change__img--1 cat-img-1-js" style="width: 0%;"></div>
@@ -180,8 +150,27 @@
               <input class="cat-change__range cat-change__range-js" type="range" name="cat-change" min="0" max="100" value="50" step="1">
               </div>
               </div>
-              </div>
+              </div> -->
+              <div class="cat-change__example">
+              <div class="image-slider__wrapper">
+                <div class="cat-image__before">
+                  <picture>
+                  <img class="cat-change__example-before" src="./img/fat-cat-change-mobile.jpg" draggable="false"/>
 
+                </div>
+                <div class="cat-image__after">
+                  <picture>
+                  <img class="cat-change__example-after" src="./img/slim-cat-change-mobile.jpg" draggable="false"/>
+                </picture>
+                </div>
+                <div class="image-slider__scroller">
+                  <svg class="scroller__thumb" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 0L0 9L8 18V0Z" fill="#666666"/>
+                    <path d="M24 9L16 0V18L24 9Z" fill="#666666"/>
+                    </svg>
+                </div>
+              </div>
+              </div>
       </div>
       </div>
     </section>

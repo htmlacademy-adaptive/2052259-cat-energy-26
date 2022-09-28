@@ -113,7 +113,7 @@
   content: "";
   position: absolute;
   height: 50px;
-  background: url("/source/img/cat-slim.svg") no-repeat;
+  background: url("../img/cat-slim.svg") no-repeat;
   top: 22px;
   left: 24px;
   width: 50px;
@@ -164,7 +164,7 @@
   content: "";
   position: absolute;
   height: 50px;
-  background: url("/source/img/cat-pro.svg") no-repeat;
+  background: url("../img/cat-pro.svg") no-repeat;
   top: 24px;
   left: 15px;
   width: 75px;
@@ -257,7 +257,7 @@
   left: 120px;
   width: 24px;
   height: 11px;
-  background: url("/source/img/arrow-right.svg") no-repeat;
+  background: url("../img/arrow-right.svg") no-repeat;
   @include tablet {
     top: 19px;
     left: 131px;
@@ -283,7 +283,7 @@
   left: 120px;
   width: 24px;
   height: 11px;
-  background: url("/source/img/arrow-right.svg") no-repeat;
+  background: url("../img/arrow-right.svg") no-repeat;
   @include tablet {
     top: 19px;
     left: 131px;

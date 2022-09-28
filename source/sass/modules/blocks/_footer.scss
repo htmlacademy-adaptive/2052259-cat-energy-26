@@ -90,7 +90,7 @@
   min-width: 320px;
   min-height: 362px;
   background-color: #f2f2f2;
-  background-image: url("/source/img/location-mape.svg");
+  background-image: url("../img/location-mape.svg");
   background-repeat: no-repeat;
   background-position: center;
   min-width: 320px;
@@ -99,11 +99,11 @@
 
   @include tablet {
     min-height: 400px;
-    background: center/cover no-repeat url("/source/img/location-tablet.png");
+    background: center/cover no-repeat url("../img/location-tablet.png");
   }
 
   @include desktop {
-    background: center/cover no-repeat url("/source/img/location-desctop.png");
+    background: center/cover no-repeat url("../img/location-desctop.png");
   }
 }
 
